@@ -1,0 +1,8 @@
+.form-signup {
+  padding: 3vh;
+  background-color: hsl(0,0%,93%);
+}
+
+mat-form-field {
+  flex: 1;
+}
