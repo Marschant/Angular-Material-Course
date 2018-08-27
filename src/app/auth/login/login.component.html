@@ -1,39 +1,45 @@
 <section class="form-login">
 
-  <form fxLayout="column" fxLayoutAlign="center left" fxLayoutGap="1vh" #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <form
+    fxLayout="column"
+    fxLayoutAlign="center left"
+    fxLayoutGap="1vh"
+    [formGroup]="loginForm"
+    #fLogin="ngForm"
+    (ngSubmit)="onSubmit()">
 
     <mat-form-field>
       <input
-        #inEmail="ngModel"
         autocomplete="email"
         email
-        matInput 
+        matInput
+        formControlName="email"
         name="email"
         ngModel
         placeholder="Your email"
         required
         type="email"    
       >
-      <mat-error *ngIf="inEmail.hasError('required')">Required *</mat-error>
-      <mat-error *ngIf="inEmail.hasError('email')">Email is invalid</mat-error>
+      <mat-hint>Please enter a valid email</mat-hint>
+      <mat-error>Invalid or missing email.</mat-error>
     </mat-form-field>
 
     <mat-form-field>
       <input
-        #inPassword="ngModel"
         autocomplete="current-password"
         matInput
-        minlength="6"
+        formControlName="password"
         name="password"
         ngModel
         placeholder="Your password"
         required
         type="password"
       >
-      <mat-error *ngIf="inPassword.hasError('required')">Required *</mat-error>
+      <mat-hint>Please enter your password</mat-hint>
+      <mat-error>Missing password.</mat-error>
     </mat-form-field>
 
-    <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Log In</button>
+    <button type="submit" mat-raised-button color="primary" [disabled]="loginForm.invalid">Log In</button>
 
   </form>
 </section>
