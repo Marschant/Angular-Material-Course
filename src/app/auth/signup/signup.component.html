@@ -4,16 +4,15 @@
 
     <mat-form-field>
       <input
-        type="email"
-        name="email"
         #inEmail="ngModel"
-        placeholder="Your email"
         autocomplete="email"
-        matInput 
-        ngModel
         email
+        matInput 
+        name="email"
+        ngModel
+        placeholder="Your email"
         required
-        
+        type="email"    
       >
       <mat-error *ngIf="inEmail.hasError('required')">Required *</mat-error>
       <mat-error *ngIf="inEmail.hasError('email')">Email is invalid</mat-error>
@@ -21,15 +20,15 @@
 
     <mat-form-field hintLabel="Should be at least 6 characters long">
       <input
-        type="password"
-        name="password"
         #inPassword="ngModel"
-        placeholder="Your password"
         autocomplete="current-password"
         matInput
-        ngModel
         minlength="6"
+        name="password"
+        ngModel
+        placeholder="Your password"
         required
+        type="password"
       >
       <mat-hint align="end"> {{ inPassword.value?.length }} / 6</mat-hint>
       <mat-error *ngIf="inPassword.hasError('required')">Required *</mat-error>
@@ -38,14 +37,14 @@
 
     <mat-form-field hintLabel="dd/mm/yyyy (min. age of 18)">
       <input
-        name="birth-date"
         #inDate="ngModel"
+        [matDatepicker]="picker"
+        [max]="maxDate"
         matInput
+        name="birth-date"
         ngModel
         placeholder="Your birthdate"
         required
-        [matDatepicker]="picker"
-        [max]="maxDate"
       >
       <mat-datepicker-toggle [for]="picker" matSuffix></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
