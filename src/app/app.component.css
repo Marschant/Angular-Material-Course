@@ -1,0 +1,16 @@
+mat-sidenav,
+mat-sidenav-container,
+mat-sidenav-content {
+    height: 100%;
+}
+
+mat-sidenav {
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 2vh 2vw;
+    min-width: 300px;
+}
+
+mat-sidenav-content {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}

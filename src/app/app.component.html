@@ -1,11 +1,11 @@
-<h1><a routerLink="/">Fitness Tracker</a></h1>
-<mat-toolbar>
-  <div class="button-row">
-    <a mat-button routerLink="signup">Sign Up!</a>
-    <a mat-button routerLink="login">Log In</a>
-    <a mat-button routerLink="training">Training</a>
-  </div>
-</mat-toolbar>
-<section>
-  <router-outlet></router-outlet>
-</section>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav role="navigation" mode="over" autoFocus="false">
+    <app-sidenav-list (sidenavClose)="sidenav.toggle();"></app-sidenav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header (sidenavToggle)="sidenav.toggle();"></app-header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

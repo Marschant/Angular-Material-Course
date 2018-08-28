@@ -1,0 +1,30 @@
+<mat-nav-list *ngIf="!userSignedIn">
+  <h3 mat-subheader>Fitness Tracker</h3>
+  <a mat-list-item routerLink="signup" color="primary" (click)='onClose()'>
+    <mat-icon>person_add</mat-icon>
+    <span>Register</span>
+  </a>
+  <a mat-list-item routerLink="login" (click)='onClose(); userSignedIn = true;'>
+    <mat-icon>face</mat-icon>
+    <span>Sign In</span>
+  </a>
+</mat-nav-list>
+
+<mat-nav-list *ngIf="userSignedIn">
+  <h3 mat-subheader>My Training</h3>
+  <a mat-list-item routerLink="training" (click)='onClose();'>
+    <mat-icon>playlist_add</mat-icon>
+    <span>New Session</span>
+  </a>
+  <a mat-list-item routerLink="training" (click)='onClose();'>
+    <mat-icon>playlist_add_check</mat-icon>
+    <span>Current Session</span>
+  </a>
+  <a mat-list-item routerLink="training" (click)='onClose();'>
+    <mat-icon>replay</mat-icon>
+    <span>Past Sessions</span>
+  </a>
+  <mat-divider></mat-divider>
+  <h3 mat-subheader>My Account</h3>
+  <a mat-list-item routerLink="/" (click)='onClose(); userSignedIn = false;'>Sign Out</a>
+</mat-nav-list>

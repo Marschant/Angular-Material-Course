@@ -1,25 +1,29 @@
 
 import { NgModule } from '@angular/core';
 import {
-  MatToolbarModule,
   MatButtonModule,
-  MatIconModule,
-  MatFormFieldModule,
-  MatInputModule,
+  MatCheckboxModule,
   MatDatepickerModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatInputModule,
   MatNativeDateModule,
-  MatCheckboxModule
+  MatToolbarModule,
+  MatSidenavModule,
+  MatListModule
 } from '@angular/material';
 
 const usedModules = [
-  MatToolbarModule,
   MatButtonModule,
-  MatIconModule,
-  MatFormFieldModule,
-  MatInputModule,
+  MatCheckboxModule,
   MatDatepickerModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatInputModule,
   MatNativeDateModule,
-  MatCheckboxModule
+  MatToolbarModule,
+  MatSidenavModule,
+  MatListModule
 ];
 
 @NgModule({
