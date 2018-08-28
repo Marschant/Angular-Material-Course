@@ -1,16 +1,16 @@
-<mat-nav-list *ngIf="!userSignedIn">
+<mat-nav-list *ngIf="!isAuth">
   <h3 mat-subheader>Fitness Tracker</h3>
   <a mat-list-item routerLink="signup" color="primary" (click)='onClose()'>
     <mat-icon>person_add</mat-icon>
     <span>Register</span>
   </a>
-  <a mat-list-item routerLink="login" (click)='onClose(); userSignedIn = true;'>
+  <a mat-list-item routerLink="login" (click)='onClose();'>
     <mat-icon>face</mat-icon>
     <span>Sign In</span>
   </a>
 </mat-nav-list>
 
-<mat-nav-list *ngIf="userSignedIn">
+<mat-nav-list *ngIf="isAuth">
   <h3 mat-subheader>My Training</h3>
   <a mat-list-item routerLink="training" (click)='onClose();'>
     <mat-icon>playlist_add</mat-icon>
@@ -26,5 +26,5 @@
   </a>
   <mat-divider></mat-divider>
   <h3 mat-subheader>My Account</h3>
-  <a mat-list-item routerLink="/" (click)='onClose(); userSignedIn = false;'>Sign Out</a>
+  <a mat-list-item routerLink="/" (click)='onClose();'>Sign Out</a>
 </mat-nav-list>
