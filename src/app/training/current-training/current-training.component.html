@@ -1,3 +1,14 @@
-<p>
-  current-training works!
-</p>
+<section class="training current" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="3vw">
+  <mat-card fxFlex>
+    <mat-card-title fxLayoutAlign="center">
+      <mat-progress-spinner mode="determinate" [value]="progress"></mat-progress-spinner>
+    </mat-card-title>
+    <mat-card-subtitle fxLayoutAlign="center">{{ progress }}%</mat-card-subtitle>
+    <mat-card-content fxLayoutAlign="center">
+      <p>Keep on going you can do it!</p>
+    </mat-card-content>
+    <mat-card-actions fxLayoutAlign="center" fxLayoutGap="1em">
+        <button type="submit" mat-flat-button color="accent" (click)="onStop()">Stop</button>
+    </mat-card-actions>
+  </mat-card>
+</section>

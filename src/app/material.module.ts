@@ -10,7 +10,12 @@ import {
   MatNativeDateModule,
   MatToolbarModule,
   MatSidenavModule,
-  MatListModule
+  MatListModule,
+  MatTabsModule,
+  MatCardModule,
+  MatSelectModule,
+  MatProgressSpinnerModule,
+  MatDialogModule
 } from '@angular/material';
 
 const usedModules = [
@@ -23,7 +28,12 @@ const usedModules = [
   MatNativeDateModule,
   MatToolbarModule,
   MatSidenavModule,
-  MatListModule
+  MatListModule,
+  MatTabsModule,
+  MatCardModule,
+  MatSelectModule,
+  MatProgressSpinnerModule,
+  MatDialogModule
 ];
 
 @NgModule({

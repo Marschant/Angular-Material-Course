@@ -1,21 +1,26 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
-html, body {
-    height: 100%;
-    font-family: Roboto, sans-serif;
+html,
+body {
+  height: 100%;
+  font-family: Roboto, sans-serif;
+  font-display: auto;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 app-root {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+section.training {
+  padding: 3vh !important;
+}
